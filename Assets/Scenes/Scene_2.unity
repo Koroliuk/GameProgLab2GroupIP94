@@ -644,7 +644,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.420915, y: 1}
+    m_SensorSize: {x: 1.6329479, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -791,7 +791,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.420915, y: 1}
+    m_SensorSize: {x: 1.6329479, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.420915, y: 1}
+    m_SensorSize: {x: 1.6329479, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 4
+    m_MaxSpeed: 1
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 450
+    m_MaxSpeed: 150
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -1330,6 +1330,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3552714262483277888, guid: fcc9985f35ad026a88a6885bb162d2e3,
+        type: 3}
+      propertyPath: m_text
+      value: 'Score: 0'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc9985f35ad026a88a6885bb162d2e3, type: 3}
 --- !u!1 &963888145
@@ -1365,15 +1370,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5ee40bbed7d02da9d46070bbd8f9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloorMask:
+  groundLayers:
     serializedVersion: 2
     m_Bits: 8
-  FeetTransform: {fileID: 349289674}
-  PlayerBody: {fileID: 963888147}
-  PlayerCamera: {fileID: 824078382}
-  Speed: 5
-  Sensitivity: 0
-  JumpForce: 10
+  groundCheck: {fileID: 349289674}
+  rb: {fileID: 963888147}
+  playerCamera: {fileID: 824078382}
+  speed: 5
+  sensitivity: 0
+  jumpForce: 5
 --- !u!54 &963888147
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1871,7 +1876,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.420915, y: 1}
+    m_SensorSize: {x: 1.6329479, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

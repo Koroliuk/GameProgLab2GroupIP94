@@ -5,23 +5,21 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    private int score = 0;
+    private int _score;
 
     private void Awake()
     {
-        scoreText.text = $"Score: {score}";
+        SetScoreText();
     }
 
-    public void IncreaseScore(int amount)
+    public void Add(int amount)
     {
-        score += amount;
-        scoreText.text = $"Score: {score}";
+        _score += amount;
+        SetScoreText();
+    }
+
+    private void SetScoreText()
+    {
+        scoreText.text = $"Score: {_score}";
     }
 }
-
-//Циліндр пригати,
-//обмеження на перехід на наступний рівень,
-//камера поправити,
-//дизайн,
-//звіт
-// рефактор матеріали та префаби

@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Scene_2");
         }
     }
 }
